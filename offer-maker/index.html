@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>自由职业报价成交器</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="hero card">
+      <h1>自由职业报价成交器</h1>
+      <p>把模糊需求变成清楚、体面、可成交的报价方案</p>
+    </header>
+
+    <section class="stats-grid" id="statsGrid">
+      <article class="card stat-item">
+        <h2>总报价次数</h2>
+        <p id="statTotal">0</p>
+      </article>
+      <article class="card stat-item">
+        <h2>已成交数量</h2>
+        <p id="statDeals">0</p>
+      </article>
+      <article class="card stat-item">
+        <h2>已成交总金额</h2>
+        <p id="statAmount">¥0</p>
+      </article>
+      <article class="card stat-item">
+        <h2>平均标准版报价</h2>
+        <p id="statAverage">¥0</p>
+      </article>
+    </section>
+
+    <section class="card">
+      <h2>报价信息填写</h2>
+      <form id="offerForm" class="form-grid">
+        <label>客户/项目名称
+          <input type="text" id="projectName" required placeholder="例如：五月商场活动海娜摊位" />
+        </label>
+
+        <label>服务类型
+          <select id="serviceType" required>
+            <option value="海娜手绘">海娜手绘</option>
+            <option value="小红书账号诊断">小红书账号诊断</option>
+            <option value="个人IP咨询">个人IP咨询</option>
+            <option value="活动策划">活动策划</option>
+            <option value="技能交换组织">技能交换组织</option>
+            <option value="其他">其他</option>
+          </select>
+        </label>
+
+        <label>客户来源
+          <select id="clientSource" required>
+            <option value="小红书">小红书</option>
+            <option value="朋友圈">朋友圈</option>
+            <option value="摆摊">摆摊</option>
+            <option value="活动">活动</option>
+            <option value="朋友介绍">朋友介绍</option>
+            <option value="其他">其他</option>
+          </select>
+        </label>
+
+        <label>客户预算
+          <select id="budgetLevel" required>
+            <option value="低">低</option>
+            <option value="中">中</option>
+            <option value="高">高</option>
+            <option value="不确定">不确定</option>
+          </select>
+        </label>
+
+        <label>项目复杂度
+          <select id="complexity" required>
+            <option value="简单">简单</option>
+            <option value="中等">中等</option>
+            <option value="复杂">复杂</option>
+          </select>
+        </label>
+
+        <label>是否急单
+          <select id="urgent" required>
+            <option value="否">否</option>
+            <option value="是">是</option>
+          </select>
+        </label>
+
+        <label>我的心理底价（元）
+          <input type="number" id="floorPrice" required min="1" placeholder="例如：800" />
+        </label>
+
+        <label>我希望成交的理想价格（元）
+          <input type="number" id="targetPrice" required min="1" placeholder="例如：1500" />
+        </label>
+
+        <label class="full">备注
+          <textarea id="remark" rows="3" placeholder="可写客户重点诉求、时间安排等"></textarea>
+        </label>
+
+        <button type="submit" class="btn-primary full">生成报价方案</button>
+      </form>
+    </section>
+
+    <section class="card" id="resultSection">
+      <h2>三档报价方案</h2>
+      <div id="offerPlans" class="plans-grid"></div>
+      <button id="saveBtn" class="btn-secondary" disabled>保存这次报价</button>
+    </section>
+
+    <section class="card">
+      <h2>历史报价记录</h2>
+      <div id="historyList" class="history-list"></div>
+    </section>
+
+    <footer class="footer-note">
+      报价不是求别人买，而是清楚地告诉对方：你能帮他解决什么问题。
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
