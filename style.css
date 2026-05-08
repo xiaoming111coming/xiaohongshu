@@ -1,0 +1,93 @@
+:root {
+  --bg: #fff8fb;
+  --card: #ffffff;
+  --text: #222222;
+  --sub: #666666;
+  --accent: #ff4d8d;
+  --accent-dark: #e73f7d;
+  --border: #ffd3e3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: var(--text);
+  background: linear-gradient(180deg, #fff7fa 0%, #fff 100%);
+}
+
+.container {
+  max-width: 760px;
+  margin: 40px auto;
+  padding: 0 16px 40px;
+}
+
+h1 {
+  margin-bottom: 8px;
+  font-size: 34px;
+}
+
+.subtitle {
+  color: var(--sub);
+  margin-bottom: 24px;
+}
+
+.card,
+.result-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 8px 20px rgba(255, 77, 141, 0.08);
+}
+
+.result-card {
+  margin-top: 16px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+input {
+  width: 100%;
+  border: 1px solid #ffc4da;
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 16px;
+}
+
+button {
+  margin-top: 12px;
+  border: none;
+  border-radius: 12px;
+  background: var(--accent);
+  color: #fff;
+  padding: 11px 18px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--accent-dark);
+}
+
+.message {
+  min-height: 24px;
+  color: #d6336c;
+  margin: 10px 0 0;
+}
+
+ol {
+  margin: 12px 0 0;
+  padding-left: 20px;
+}
+
+li {
+  line-height: 1.8;
+}
