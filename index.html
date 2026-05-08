@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>小红书标题生成器</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>小红书标题生成器</h1>
+    <p class="subtitle">输入一个主题，一键生成 10 个有吸引力的小红书风格标题。</p>
+
+    <section class="card">
+      <label for="topic">主题</label>
+      <input id="topic" type="text" placeholder="例如：自由职业、大理旅居、海娜摆摊" />
+      <button id="generateBtn">生成标题</button>
+      <p id="message" class="message"></p>
+    </section>
+
+    <section class="result-card">
+      <h2>生成结果</h2>
+      <ol id="resultList"></ol>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
