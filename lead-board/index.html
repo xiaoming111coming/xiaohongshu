@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>个人IP线索成交看板</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="hero">
+        <h1>个人IP线索成交看板</h1>
+        <p>把流量、私聊和机会变成可跟进的收入线索</p>
+      </header>
+
+      <section class="stats" id="statsCards"></section>
+
+      <section class="card form-card">
+        <h2>新增线索</h2>
+        <form id="leadForm" class="lead-form">
+          <label>
+            姓名或备注
+            <input type="text" id="name" required placeholder="例如：小王（想做咨询）" />
+          </label>
+
+          <label>
+            来源
+            <select id="source" required>
+              <option value="小红书">小红书</option>
+              <option value="朋友圈">朋友圈</option>
+              <option value="摆摊">摆摊</option>
+              <option value="活动">活动</option>
+              <option value="朋友介绍">朋友介绍</option>
+              <option value="其他">其他</option>
+            </select>
+          </label>
+
+          <label>
+            需求类型
+            <select id="demand" required>
+              <option value="咨询">咨询</option>
+              <option value="海娜">海娜</option>
+              <option value="活动">活动</option>
+              <option value="技能交换">技能交换</option>
+              <option value="合作">合作</option>
+              <option value="其他">其他</option>
+            </select>
+          </label>
+
+          <label>
+            状态
+            <select id="status" required>
+              <option value="新线索">新线索</option>
+              <option value="已私聊">已私聊</option>
+              <option value="已报价">已报价</option>
+              <option value="考虑中">考虑中</option>
+              <option value="已成交">已成交</option>
+              <option value="已放弃">已放弃</option>
+            </select>
+          </label>
+
+          <label>
+            预计金额
+            <input type="number" id="amount" min="0" step="0.01" placeholder="例如：499" />
+          </label>
+
+          <label>
+            下次跟进日期
+            <input type="date" id="followUpDate" />
+          </label>
+
+          <label class="full-width">
+            备注
+            <textarea id="note" rows="3" placeholder="补充对方需求、预算、沟通重点..."></textarea>
+          </label>
+
+          <button type="submit" class="add-btn">添加线索</button>
+        </form>
+      </section>
+
+      <section class="card">
+        <div class="list-header">
+          <h2>线索列表</h2>
+          <label>
+            状态筛选
+            <select id="filterStatus">
+              <option value="全部">全部</option>
+              <option value="新线索">新线索</option>
+              <option value="已私聊">已私聊</option>
+              <option value="已报价">已报价</option>
+              <option value="考虑中">考虑中</option>
+              <option value="已成交">已成交</option>
+              <option value="已放弃">已放弃</option>
+            </select>
+          </label>
+        </div>
+        <div id="leadList" class="lead-list"></div>
+      </section>
+
+      <footer class="footer-note">别让感兴趣的人消失在聊天记录里。</footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
